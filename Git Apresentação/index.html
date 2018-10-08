@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Versionando códigos com Git e Github</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+            --color-key: #411e2f;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Versionando códigos com Git e GitHub</h1>
+    </header>
+
+    <section class="slide">
+            <h2 class="shout">
+                
+                    Versionando códigos com<br>
+                    Git e Github
+            </h2>
+    </section>
+
+    <section class="slide">
+        <h2><b>Quem somos</b></h2>
+        <h3></h3>
+    </section>
+
+    <section class="slide">
+        <h2><b>Quem somos</b></h2>
+        <h3></h3>
+    </section>
+
+    <section class="slide">
+            <h2><b>Versionamento de código</b></h2>
+            <div class="columns two">
+                <p><b>Versionamento de código?</b><br>Sistema que registra mudanças feitas em um arquivo (ou num conjunto de arquivos), permitindo recuperar versões específicas.</p>
+                <p><b>Por que é necessário?</b><br></p>
+            </div>
+    </section>
+
+    <section class="slide">
+            <h2><b>Git e GitHub</b></h2>
+            <div class="columns two">
+                <p><b>Git</b><br>Sistema de controle de versão de arquivos. Permite desenvolver projetos, nos quais várias pessoas podem contribuir, sem riscos de alterações serem sobrescritas por engano.</p>
+                <p><b>GitHub</b><br>Serviço web que oferece diversas funcionalidades aplicadas ao git. Pode ser usado para hospedar projetos de maneira gratuita.</p>
+            </div>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Criar uma pasta na área de trabalho</li>
+                <li>Abrir a pasta, clicar com o botão direito e selecionar 'Git Bash Here'</li>
+                <li>Digitar <code> git init </code>(esse comando vai inicializar o git dentro dessa pasta)</li>
+                <li>Criar uma nova branch</li>
+                <li><code>git checkout -b nome_da_sua_branch</code></li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>O que é um branch?</b></h2>
+            <ul>
+                    <li>Branch é uma ramificação de um projeto</li>
+                    <li>Temos a branch principal <code> master </code></li>
+                    <li>Criamos "cópias" da branch principal para fazer alterações sem correr o risco de alterar a principal</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Crie um arquivo dentro da sua pasta e salve</li>
+                <li>Digite <code> git status </code></li>
+                <li>Esse comando vai mostrar todos os arquivos alterados na sua branch</li>
+                <li>Para adicionar as alterações use <code> git add nome_do_arquivo </code></li>
+                <li>Se tiver mais de um arquivo e quiser adicionar todos <code>git add .</code></li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li><code>git commit</code></li>
+                <li><code>git commit -m "Sua mensagem aqui"</code></li>
+                <li>Errou a mensagem do commit? <code>git commit --amend</code></li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>O que é um commit?</b></h2>
+            <ul>
+                    <li>Commit é um pacote fechado com todas as alterações que você fez para o seu projeto.</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li><code>git push -u origin nome_da_sua_branch</code></li>
+                <li>Esse comando vai criar uma branch remota igual a sua branch local</li>
+                <li>Para próximos push na mesma branch usar somente <code>git push</code></li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Pull Request</b></h2>
+            <ul>
+                <li>Quando você cria uma nova branch e realiza modificações, a melhor maneira de adicionar à branch principal (master) é abrindo um Pull Request.</li>
+                <li>O Pull Request significa que você está enviando uma sugestão de melhoria para o repositório.</li>
+                <li>Pode ser utilizado tanto no seu repositório pessoal como no repositório de outra pessoa, onde você deseja colaborar.</li>    
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Outros comandos importantes</b></h2>
+            <ul>
+                <li><code>git clone endereco_do_repositorio</code></li>
+                <li>Esse comando vai clonar um repositório remoto dentro da sua máquina local</li>
+                <li><code>git pull</code></li>
+                <li>Esse comando vai atualizar sua branch local de acordo com a branch remota</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2 class="shout">
+                Colaborando em <br>
+                projetos
+            </h2>
+    </section>
+
+    <section class="slide">
+            <h2><b>Colaborando em projetos</b></h2>
+            <ul>
+                <li>Quando você deseja colaborar com o projeto de alguém, o primeiro passo é fazer um 'Fork' no repositório da pessoa.</li>
+                <li>Isso vai criar um repositório igual ao dela, no seu GitHub</li>
+                <li>Á partir daí você pode realizar um <code>git clone</code> no seu repositório, fazer alterações e fazer Pull Requests</li>    
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hacktoberfest</b></h2>
+            <ul>
+                <li>Hacktoberfest é um evento promovido pela DigitalOcean em parceria com o Github</li>
+                    <ol>
+                        <li>Cadastre seu usuario github no site oficial do <a href="https://hacktoberfest.digitalocean.com/">Hacktoberfest</a></li>
+                        <li>Procure no GitHub issues com a label 'hacktoberfest'</li>
+                        <li>Abra 5 pull requests até o dia 31 de outubro</li>
+                        <li>Receba uma camiseta do evento!!</li>
+                    </ol>
+            </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Dúvidas?</h2>
+    </section>
+    <section class="slide">
+            <h2 class="shout">Obrigado!</h2>
+    </section>
+
+    <div class="progress"></div>
+
+	<script src="js/shower.min.js"></script>
+
+	<!-- Copyright © 2018 Yours Truly, Famous Inc. -->
+</body>
+</html>
