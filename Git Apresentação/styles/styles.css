@@ -7,3 +7,26 @@
 @import 'blocks/progress.css';
 @import 'blocks/region.css';
 @import 'slide/slide.css';
+
+
+.about-image{
+    width: 30%;
+    float: left;
+}
+.about-image img{
+    border-radius: 50%;
+}
+.about-description{
+    width: 70%;
+    float: left;
+    margin-top: 0px;
+}
+
+.about-description p{
+    font-size: 14px;
+}
+
+.slide .title-description{
+    text-align: center;
+    margin-top: 3.3em;
+}
