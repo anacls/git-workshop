@@ -12,6 +12,8 @@
 .about-image{
     width: 30%;
     float: left;
+    height: 30em;
+    margin-top: 3em;
 }
 .about-image img{
     border-radius: 50%;
@@ -19,7 +21,6 @@
 .about-description{
     width: 70%;
     float: left;
-    margin-top: 0px;
 }
 
 .about-description p{
@@ -29,4 +30,8 @@
 .slide .title-description{
     text-align: center;
     margin-top: 3.3em;
+}
+
+.example-image{
+    text-align: center;
 }
