@@ -4,7 +4,11 @@
 	<title>Versionando códigos com Git e Github</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="styles/styles.css">
+
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
@@ -75,8 +79,8 @@
     <section class="slide">
             <h2><b>Git e GitHub</b></h2>
             <div class="columns two">
-                <p><b>Git</b><br>Sistema de controle de versão de arquivos. Permite desenvolver projetos, nos quais várias pessoas podem contribuir, sem riscos de alterações serem sobrescritas por engano.</p>
-                <p><b>GitHub</b><br>Serviço web que oferece diversas funcionalidades aplicadas ao git. Pode ser usado para hospedar projetos de maneira gratuita.</p>
+                <p><i class="fas fa-code-branch"></i><b>Git</b><br>Sistema de controle de versão de arquivos. Permite desenvolver projetos, nos quais várias pessoas podem contribuir, sem riscos de alterações serem sobrescritas por engano.</p>
+                <p><i class="fab fa-github"></i><b>GitHub</b><br>Serviço web que oferece diversas funcionalidades aplicadas ao git. Pode ser usado para hospedar projetos de maneira gratuita.</p>
             </div>
     </section>
 
@@ -98,6 +102,12 @@
                     <li>Criamos "cópias" da branch principal para fazer alterações sem correr o risco de alterar a principal</li>
                     <li><code>git checkout -b nome_da_sua_branch</code></li>
             </ul>
+    </section>
+
+    <section class="slide">
+            <div class="example-branch-image">
+                    <img src="img/branch-example.png" alt="Imagem de exemplo de uma branch" width="500">
+                </div>
     </section>
 
     <section class="slide">
@@ -133,6 +143,25 @@
                 <li><code>git push -u origin nome_da_sua_branch</code></li>
                 <li>Esse comando vai criar uma branch remota igual a sua branch local</li>
                 <li>Para próximos push na mesma branch usar somente &nbsp;<code>git push</code></li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>O que é um merge?</b></h2>
+            <ul>
+                <li>
+                    O merge é responsável por juntar os commits das branch que você criou incluindo na linha do tempo da branch desejada. 
+                    Na maioria dos casos isso é Feito na branch master.
+                </li>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Antes de realizar um merge, é necessário selecionar a branch que receberá as atualizações</li>
+                <li><code>git checkout master</code></li>
+                <li><code>git merge nome_da_sua_branch</code></li>            
+                <li>Feito isso é só executar o comando &nbsp;<code>git push origin master</code>&nbsp; que ele irá atualizar a sua branch <i>master</i> remota</li>
             </ul>
     </section>
 
