@@ -35,3 +35,18 @@
 .example-image{
     text-align: center;
 }
+
+.slide .fab{
+    color: #555;
+    margin-right: 10px;
+}
+
+.slide .fas{
+    color: #555;
+    margin-right: 10px;
+}
+
+.slide .example-branch-image{
+    text-align: center;
+    margin-top: 2.5em;
+}
