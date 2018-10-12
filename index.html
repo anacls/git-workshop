@@ -85,47 +85,56 @@
     </section>
 
     <section class="slide">
+        <h2><b>Hands-on</b></h2>
+        
+        <ul> <b> Pré requisitos: </b>
+            <li>Ter o git instalado no seu computador <a href="https://git-scm.com/downloads">(link para download)</a></li>
+            <li>Ter uma conta no GitHub <a href="https://github.com/">(link para criar conta)</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2><b>Hands-on</b></h2>
+        
+        <ul> <b>Criando o repositório remoto</b>
+            <li>Criar um novo repositório no GitHub</li>
+        </ul>
+        <img src="img/new_repository.png" alt="Botão 'Novo repositório'" width="250">
+    </section>
+
+    <section class="slide">
+        <h2><b>Hands-on</b></h2>
+            <img src="img/creating_new_repository.png" alt="Criando repositório" width="500">
+    </section>
+
+    <section class="slide">
             <h2><b>Hands-on</b></h2>
-            <ul>
+            
+            <ul> <b>Criando o repositório local</b>
                 <li>Criar uma pasta na área de trabalho</li>
                 <li>Abrir a pasta, clicar com o botão direito e selecionar 'Git Bash Here'</li>
                 <li>Digitar &nbsp;&nbsp;<code>git init</code>&nbsp;&nbsp;(esse comando vai inicializar o git dentro dessa pasta)</li>
-                <li>Criar uma nova branch</li>
+                <li>Adicionar configurações globais do git usando os comandos: <br> <code>git config --global "seu_username"<br> git config --global "seu_email"</code></li>
             </ul>
-    </section>
-
-    <section class="slide">
-            <h2><b>O que é um branch?</b></h2>
-            <ul>
-                    <li>Branch é uma ramificação de um projeto</li>
-                    <li>Temos a branch principal &nbsp;<code>master</code></li>
-                    <li>Criamos "cópias" da branch principal para fazer alterações sem correr o risco de alterar a principal</li>
-                    <li><code>git checkout -b nome_da_sua_branch</code></li>
-            </ul>
-    </section>
-
-    <section class="slide">
-            <div class="example-branch-image">
-                    <img src="img/branch-example.png" alt="Imagem de exemplo de uma branch" width="500">
-                </div>
     </section>
 
     <section class="slide">
             <h2><b>Hands-on</b></h2>
             <ul>
-                <li>Crie um arquivo dentro da sua pasta e salve</li>
+                <li>Crie um arquivo &nbsp;<code>git-workshop.txt</code>&nbsp; dentro da sua pasta e salve</li>
                 <li>Digite &nbsp;<code>git status</code></li>
-                <li>Esse comando vai mostrar todos os arquivos alterados na sua branch</li>
+                <li>Esse comando vai mostrar todos os arquivos alterados</li>
                 <li>Para adicionar as alterações use &nbsp;<code>git add nome_do_arquivo</code></li>
                 <li>Se tiver mais de um arquivo e quiser adicionar todos &nbsp;<code>git add .</code></li>
+                <li>Fazer um &nbsp;<code>commit</code></li>
             </ul>
     </section>
 
     <section class="slide">
-        <h2><b>O que é um commit?</b></h2>
-        <ul>
-                <li>Commit é um pacote fechado com todas as alterações que você fez para o seu projeto.</li>
-        </ul>
+            <h2><b>O que é um commit?</b></h2>
+            <ul>
+                    <li>Commit é um pacote fechado com todas as alterações que você fez para o seu projeto.</li>
+            </ul>
     </section>
 
     <section class="slide">
@@ -138,13 +147,30 @@
     </section>
 
     <section class="slide">
+            <h2><b>O que é um branch?</b></h2>
+            <ul>
+                    <li>Branch é uma ramificação de um projeto</li>
+                    <li>Temos a branch principal &nbsp;<code>master</code></li>
+                    <li>Criamos "cópias" da branch principal para fazer alterações sem correr o risco de alterar a principal</li>
+            </ul>
+    </section>
+        
+    <section class="slide">
+            <div class="example-branch-image">
+                    <img src="img/branch-example.png" alt="Imagem de exemplo de uma branch" width="500">
+                </div>
+    </section>
+    <section class="slide">
             <h2><b>Hands-on</b></h2>
             <ul>
+                <li>Fazer um &nbsp;<code>push</code></li>
                 <li><code>git push -u origin nome_da_sua_branch</code></li>
+                <li>Como estamos usando a master &nbsp;<code>git push -u origin master</code>&nbsp;</li>
                 <li>Esse comando vai criar uma branch remota igual a sua branch local</li>
                 <li>Para próximos push na mesma branch usar somente &nbsp;<code>git push</code></li>
             </ul>
     </section>
+
 
     <section class="slide">
             <h2><b>O que é um merge?</b></h2>
