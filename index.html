@@ -66,7 +66,7 @@
             <h2><b>Versionamento de código</b></h2>
             <div class="columns two">
                 <p><b>Versionamento de código?</b><br>Sistema que registra mudanças feitas em um arquivo (ou num conjunto de arquivos), permitindo recuperar versões específicas.</p>
-                <p><b>Por que é necessário?</b><br>Mantém todas as versões em um único local, permitindo controlar tudo que esta sendo desenvolvido no projeto.</p>
+                <p><b>Por que é necessário?</b><br>Mantém todas as versões em um único local, permitindo controlar tudo que está sendo desenvolvido no projeto.</p>
             </div>
     </section>
     
@@ -88,16 +88,16 @@
         <h2><b>Hands-on</b></h2>
         
         <ul> <b> Pré requisitos: </b>
-            <li>Ter o git instalado no seu computador <a href="https://git-scm.com/downloads">(link para download)</a></li>
-            <li>Ter uma conta no GitHub <a href="https://github.com/">(link para criar conta)</a></li>
+            <li>Ter o git instalado no computador <a href="https://git-scm.com/downloads">(link para download)</a>;</li>
+            <li>Ter uma conta no GitHub <a href="https://github.com/">(link para criar conta)</a>.</li>
         </ul>
     </section>
 
     <section class="slide">
         <h2><b>Hands-on</b></h2>
         
-        <ul> <b>Criando o repositório remoto</b>
-            <li>Criar um novo repositório no GitHub</li>
+        <ul><b>Criando o repositório remoto</b>
+            <li>Crie um novo repositório no GitHub.</li>
         </ul>
         <img src="img/new_repository.png" alt="Botão 'Novo repositório'" width="250">
     </section>
@@ -111,22 +111,75 @@
             <h2><b>Hands-on</b></h2>
             
             <ul> <b>Criando o repositório local</b>
-                <li>Criar uma pasta na área de trabalho</li>
-                <li>Abrir a pasta, clicar com o botão direito e selecionar 'Git Bash Here'</li>
-                <li>Digitar &nbsp;&nbsp;<code>git init</code>&nbsp;&nbsp;(esse comando vai inicializar o git dentro dessa pasta)</li>
-                <li>Adicionar configurações globais do git usando os comandos: <br> <code>git config --global "seu_username"<br> git config --global "seu_email"</code></li>
+                <li>Crie uma pasta na área de trabalho;</li>
+                <li>Abra a pasta, clique com o botão direito e selecione 'Git Bash Here';</li>
+                <li>Digite &nbsp;&nbsp;<code>git init</code>&nbsp;&nbsp;(esse comando vai inicializar o git dentro dessa pasta);</li>
+                <li>Adicione as configurações globais do git usando os comandos: <br> <code>git config --global user.name "seu_username"<br> git config --global user.email "seu_email"</code></li>
             </ul>
     </section>
 
     <section class="slide">
             <h2><b>Hands-on</b></h2>
+            
+            <ul><b>Vinculando o repositório remoto ao repositório local</b>
+                <li>Você pode vincular seus repositórios usando <b>HTTPS</b> ou <b>SSH</b>;</li>
+                <li>Usar <b>HTTPS</b> é uma forma mais simples;</li>
+                <li>Usar <b>SSH</b> é uma forma mais segura;</li>
+                <li>Aqui vamos usar <b>HTTPS</b>, mas se você quiser usar <b>SSH</b> pode fazer o setup seguindo <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">essas orientações</a> do GitHub.</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+        <h2><b>Hands-on</b></h2>
+        
+        <ul><b>Vinculando o repositório remoto ao repositório local</b>
+            <li>Copie o link do seu repositório na página inicial dele;</li>
+            <li>Não se esqueça de selecionar de acordo com o protocolo a ser usado (HTTPS ou SSH).</li>
+            <div class="example-image">
+                <img src="img/repository-initial-page.png" alt="Git status" width="650">
+            </div>
+        </ul>
+
+</section>
+
+    <section class="slide">
+        <h2><b>Hands-on</b></h2>
+        
+        <ul><b>Ligando o repositório remoto ao repositório local</b>
+            <li>Para ligar o repositório remoto ao repositório local, use o comando<br>
+                <code>git remote add origin link_do_repositorio</code>
+            </li>
+            <li>Fazendo essa ligação, é possível sincronizar manualmente, através de comandos git, suas alterações entre os repositórios.</li>
+        </ul>
+</section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
             <ul>
-                <li>Crie um arquivo &nbsp;<code>git-workshop.txt</code>&nbsp; dentro da sua pasta e salve</li>
-                <li>Digite &nbsp;<code>git status</code></li>
-                <li>Esse comando vai mostrar todos os arquivos alterados</li>
-                <li>Para adicionar as alterações use &nbsp;<code>git add nome_do_arquivo</code></li>
-                <li>Se tiver mais de um arquivo e quiser adicionar todos &nbsp;<code>git add .</code></li>
-                <li>Fazer um &nbsp;<code>commit</code></li>
+                <li>Dentro da sua pasta local crie um arquivo &nbsp;<code>git-workshop.txt</code>&nbsp; e salve;</li>
+                <li>No terminal git digite &nbsp;<code>git status</code>&nbsp;;</li>
+                <li>Esse comando vai mostrar todos os arquivos alterados.</li>
+            </ul>
+            <div class="example-image">
+                <img src="img/git-status.png" alt="Git status" width="500">
+            </div>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Para adicionar as alterações, use &nbsp;<code>git add nome_do_arquivo</code>&nbsp;;</li>
+                <li>Se tiver mais de um arquivo e quiser adicionar todos, use &nbsp;<code>git add .</code>&nbsp;</li>
+            </ul>
+    </section>
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                    <li>Faça um &nbsp;<code>git status</code>&nbsp; e verá que agora está tudo pronto para o próximo passo, fazer um <b>commit</b>.</li>
+                    <br>
+                    <div class="example-image">
+                        <img src="img/git-status-after-add.png" alt="Git status depois de adicionar o arquivo" width="500">
+                    </div>
             </ul>
     </section>
 
@@ -140,34 +193,100 @@
     <section class="slide">
             <h2><b>Hands-on</b></h2>
             <ul>
-                <li><code>git commit</code></li>
-                <li><code>git commit -m "Sua mensagem aqui"</code></li>
-                <li>Errou a mensagem do commit? &nbsp;<code>git commit --amend</code></li>
+                <li>Você pode fazer um <b>commit</b> mais detalhado, contendo título e descrição usando &nbsp;<code>git commit</code>&nbsp;;</li>
+                <li>Ou de uma maneira mais simples, só adicionando o título <br><code>git commit -m "Sua mensagem aqui"</code>&nbsp;;</li> 
+                <li>Errou a mensagem do commit? <br><code>git commit -m "Sua mensagem corrigida aqui" --amend</code>&nbsp;;</li>
+                <li>O comando &nbsp;<code>git commit --amend</code>&nbsp; sobrescreve o último commit.</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                    <li>Faça um &nbsp;<code>git log</code>&nbsp; para conferir seus commits.</li>
+                    <li>Se estiver tudo certo, o próximo passo é fazer um <b>push</b> para o branch remoto.</li>
+                    <br>
+                    <div class="example-image">
+                        <img src="img/git-log.png" alt="Git log" width="500">
+                    </div>
             </ul>
     </section>
 
     <section class="slide">
             <h2><b>O que é um branch?</b></h2>
             <ul>
-                    <li>Branch é uma ramificação de um projeto</li>
-                    <li>Temos a branch principal &nbsp;<code>master</code></li>
-                    <li>Criamos "cópias" da branch principal para fazer alterações sem correr o risco de alterar a principal</li>
+                    <li>Branch é uma ramificação de um projeto;</li>
+                    <li>Temos o branch principal <b>master</b>;</li>
+                    <li>Criamos "cópias" do branch principal para fazer alterações sem correr o risco de alterar o principal;</li>
+                    <li>Por enquanto, estamos usando o branch <b>master</b> para inicializar os dois repositórios.</li>
             </ul>
     </section>
         
     <section class="slide">
             <div class="example-branch-image">
                     <img src="img/branch-example.png" alt="Imagem de exemplo de uma branch" width="500">
-                </div>
+            </div>
     </section>
     <section class="slide">
             <h2><b>Hands-on</b></h2>
             <ul>
-                <li>Fazer um &nbsp;<code>push</code></li>
-                <li><code>git push -u origin nome_da_sua_branch</code></li>
-                <li>Como estamos usando a master &nbsp;<code>git push -u origin master</code>&nbsp;</li>
-                <li>Esse comando vai criar uma branch remota igual a sua branch local</li>
-                <li>Para próximos push na mesma branch usar somente &nbsp;<code>git push</code></li>
+                <li>O próximo passo é enviar suas alterações locais para o repositório remoto, para isso, use &nbsp;<code>git push</code>&nbsp;;</li>
+                <li>Se você digitar &nbsp;<code>git push</code>&nbsp;, vai perceber que o git te pede para fazer o push usando &nbsp;<code>git push --set-upstream origin nome_da_branch</code>&nbsp;;</li>
+                <li>Isso acontece porque como é a primeira vez que um <b>push</b> está sendo feito nesse branch, é necessário referenciar a origem para que o branch seja criado remotamente.</li>
+            </ul>
+    </section>
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Para resumir, use <br> &nbsp;<code>git push -u origin nome_do_seu_branch</code>&nbsp;;</li>
+                <li>Como o branch usado é o master: &nbsp;<code>git push -u origin master</code>&nbsp;;</li>
+                <li>Para próximos <b>push</b> no mesmo branch você pode usar só &nbsp;<code>git push</code>&nbsp;.</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Agora, se você olhar seu repositório no GitHub, vai ver que ele contém o seu arquivo.</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Vamos colocar conteúdo no arquivo &nbsp;<code>git-workshop.txt</code>&nbsp;;</li>
+                <li>Primeiro, crie um novo branch usando <br> &nbsp;<code>git checkout -b editando-arquivo</code>&nbsp;;</li>
+                <li>Agora, edite o arquivo &nbsp;<code>git-workshop.txt</code>&nbsp; escrevendo alguma coisa dentro dele.</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Verifique se o arquivo foi realmente alterado usando &nbsp;<code>git status</code>&nbsp;;</li>
+                <li>Veja exatamente o que foi alterado usando &nbsp;<code>git diff</code>&nbsp;.</li>
+                <br>
+                <div class="example-image">
+                        <img src="img/git-diff.png" alt="Git diff" width="500">
+                </div>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Adicione ao pacote de alterações usando &nbsp;<code>git add git-workshop.txt</code>&nbsp;;</li>
+                <li>Faça um novo commit &nbsp;<code>git commit -m "Sua mensagem aqui"</code>&nbsp;;</li>
+                <li>Faça um push para o novo branch <br>&nbsp;<code>git push -u origin editando-arquivo</code>&nbsp;;</li>
+            </ul>
+    </section>
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Verifique o repositório no GitHub;</li>
+                <li>Agora o repositório contém 2 branches;</li>
+                <li>O arquivo está diferente em cada um dos branches;</li>
+                <li>Para unificar os dois branches é necessário fazer um <b>merge</b>.</li>
             </ul>
     </section>
 
@@ -176,39 +295,18 @@
             <h2><b>O que é um merge?</b></h2>
             <ul>
                 <li>
-                    O merge é responsável por juntar os commits das branch que você criou incluindo na linha do tempo da branch desejada. 
-                    Na maioria dos casos isso é Feito na branch master.
+                    O merge é responsável por juntar os commits dos branches que você criou incluindo na linha do tempo do branch desejado. 
+                    Na maioria dos casos isso é feito no branch master.
                 </li>
     </section>
 
     <section class="slide">
             <h2><b>Hands-on</b></h2>
             <ul>
-                <li>Antes de realizar um merge, é necessário selecionar a branch que receberá as atualizações</li>
-                <li><code>git checkout master</code></li>
-                <li><code>git merge nome_da_sua_branch</code></li>            
-                <li>Feito isso é só executar o comando &nbsp;<code>git push origin master</code>&nbsp; que ele irá atualizar a sua branch <i>master</i> remota</li>
-            </ul>
-    </section>
-
-    <section class="slide">
-            <h2><b>Pull Request</b></h2>
-            <ul>
-                <li>Quando você cria uma nova branch e realiza modificações, a melhor maneira de adicionar à branch principal <b>(master)</b> é abrindo um Pull Request.</li>
-                <li>O Pull Request significa que você está enviando uma sugestão de melhoria para o repositório.</li>
-                <li>Pode ser utilizado tanto no seu repositório pessoal como no repositório de outra pessoa, onde você deseja colaborar.</li>    
-            </ul>
-    </section>
-
-    <section class="slide">
-            <h2><b>Outros comandos importantes</b></h2>
-            <code>git clone endereco_do_repositorio</code>
-            <ul>                
-                <li>Esse comando vai clonar um repositório remoto dentro da sua máquina local</li>
-            </ul>
-            <code>git pull</code>
-            <ul>                
-                <li>Esse comando vai atualizar sua branch local de acordo com a branch remota</li>
+                <li>Antes de realizar um merge, é necessário selecionar o branch que receberá as atualizações, no nosso caso &nbsp;<code>git checkout master</code>&nbsp;;</li>
+                <li>Agora o merge já pode ser realizado: &nbsp;<code>git merge editando-arquivo</code>&nbsp;;</li>            
+                <li>Feito isso, é só executar o comando &nbsp;<code>git push origin master</code>&nbsp; que ele irá atualizar o seu branch <i>master</i> remoto;</li>
+                <li>Agora você verá suas alterações no branch master.</li>
             </ul>
     </section>
 
@@ -222,9 +320,120 @@
     <section class="slide">
             <h2><b>Colaborando em projetos</b></h2>
             <ul>
-                <li>Quando você deseja colaborar com o projeto de alguém, o primeiro passo é fazer um <b>'Fork'</b> no repositório da pessoa.</li>
-                <li>Isso vai criar um repositório igual ao dela, no seu GitHub</li>
-                <li>Á partir daí você pode realizar um &nbsp;<code>git clone</code>&nbsp; no seu repositório, fazer alterações e fazer Pull Requests</li>    
+                <li>Quando você deseja colaborar com o projeto de alguém, o primeiro passo é fazer um <b>'Fork'</b> no repositório da pessoa;</li>
+                <li>Isso vai criar um repositório igual ao dela, no seu GitHub;</li>
+                <li>A partir daí, você pode realizar um &nbsp;<code>git clone</code>&nbsp; no seu repositório, fazer alterações e fazer pull requests.</li>    
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Pull Request</b></h2>
+            <ul>
+                <li>Para que suas alterações sejam vinculadas ao branch principal de um projeto que não é seu, você precisa abrir um Pull Request.</li>
+                <li>O Pull Request significa que você está enviando uma sugestão de melhoria para o repositório.</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Colaborando em projetos</b></h2>
+            <ul>
+                <li>Vamos colaborar no projeto <a href="https://github.com/marqueslu/participants-git-workshop">'participants-git-workshop'</a>, criado para esse workshop;</li> 
+                <li>Nesse projeto você adicionará algumas informações: seu nome, uma breve descrição sobre você e seu perfil do GitHub.</li>
+            </ul>
+    </section>
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Faça um fork nesse <a href="https://github.com/marqueslu/participants-git-workshop">repositório</a>;</li>
+                <li>Você será direcionado para a sua cópia do repositório;</li>
+                <li>Copie o link para clonar seu repositório.</li>
+                <div class="example-image">
+                        <img src="img/git-clone.png" alt="Git clone" width="500">
+                </div>
+            </ul>
+    </section>
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Vá até a pasta onde você deseja adicionar o novo repositório, clique com o botão direito e depois em 'Git Bash Here';</li>
+                <li>Faça um &nbsp;<code>git clone link_do_repositorio</code>&nbsp;;</li>            
+                <li>Abra a pasta criada usando &nbsp;<code>cd participants-git-workshop</code>&nbsp;;</li>
+                <li>Crie uma nova branch <br><code>git checkout -b adicionando-seu_nome-profile</code>&nbsp;;</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Abra e edite o arquivo &nbsp;<code>index.html</code>&nbsp;;</li>
+                <li>Adicione informações sobre você, seguindo o padrão: <br> 
+                            <pre>
+                                <code>&lt;article&gt;</code>
+                                <code>    &lt;strong&gt;seu_nome&lt;/strong&gt;</code>
+                                <code>    &lt;p&gt;Uma breve descrição sobre você&lt;/p&gt;</code>
+                                <code>    &lt;a href="url_do_seu_github"&gt;Github&lt;/a&gt;</code>
+                                <code>&lt;/article&gt;</code>
+                            </pre>
+                </li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Faça &nbsp;<code>git status</code>&nbsp;;</li>
+                <li>Confira se adicionou certo usando &nbsp;<code>git diff</code>&nbsp;;</li>
+                <li>Adicione a alteração &nbsp;<code>git add index.html</code>&nbsp;;</li>
+                <li>Faça um commit <br>&nbsp;<code>git commit -m "Adicionando informações de seu_nome"</code>&nbsp;;</li>            
+                <li>Envie o commit para o seu branch <br> &nbsp;<code>git push -u origin nome_do_seu_branch</code>&nbsp;.</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Nosso próximo passo é abrir um Pull Request;</li>
+                <li>No seu repositório do GitHub você vai ver um novo branch;</li>
+                <li>Clique em <b>branches</b> para ver todos os branches do seu projeto;</li>
+                <li>Para abrir um Pull Request, basta clicar em 'New pull request' ao lado do seu branch.</li>
+                <div class="example-image">
+                        <img src="img/branches.png" alt="Abrindo PR" width="750">
+                </div>            
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Na página de Pull Request você conseguirá identificar algumas informações importantes;</li>
+            </ul>
+    </section>
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li><b>base fork</b>: repositório para o qual você está mandando as alterações;</li>
+                <li><b>base</b>: branch onde deseja inserir as alterações;</li>
+                <li><b>head fork</b>: seu repositório (cópia do repositório original da outra pessoa);</li>
+                <li><b>compare</b>: branch que contém as alterações que você deseja enviar;</li>
+                <div class="example-image">
+                        <img src="img/pull-request.png" alt="Abrindo PR" width="600">
+                </div>            
+            </ul>
+    </section>
+    <section class="slide">
+            <h2><b>Hands-on</b></h2>
+            <ul>
+                <li>Se desejar, adicione uma mensagem de descrição para o pull request;</li>
+                <li>Crie o pull request;</li>
+                <li>Acompanhe, o moderador do repositório pode comentar, aprovar ou solicitar mudanças.</li>
+            </ul>
+    </section>
+
+    <section class="slide">
+            <h2><b>Outro comando importante</b></h2>
+            <code>git pull</code>
+            <ul>                
+                <li>Esse comando atualiza seu branch local de acordo com o branch remoto.</li>
             </ul>
     </section>
 
@@ -233,11 +442,11 @@
             <ul>
                 <li>Hacktoberfest é um evento promovido pela DigitalOcean em parceria com o Github</li>
                     <ol>
-                        <li>Cadastre seu usuario github no site oficial do <a href="https://hacktoberfest.digitalocean.com/">Hacktoberfest</a></li>
-                        <li>Procure no GitHub issues com a label 'hacktoberfest'</li>
-                        <li>Abra 5 pull requests até o dia 31 de outubro</li>
-                        <li>Acompanhe o seu progresso utilizando o <a href="https://hacktoberfestchecker.herokuapp.com">Hacktoberfest Checker</a></li>
-                        <li>Receba uma camiseta do evento!!</li>
+                        <li>Cadastre seu usuario github no site oficial do <a href="https://hacktoberfest.digitalocean.com/">Hacktoberfest</a>;</li>
+                        <li>Procure no GitHub issues com a label 'hacktoberfest';</li>
+                        <li>Abra 5 pull requests até o dia 31 de outubro;</li>
+                        <li>Acompanhe o seu progresso utilizando o <a href="https://hacktoberfestchecker.herokuapp.com">Hacktoberfest Checker</a>;</li>
+                        <li>Receba uma camiseta do evento!!!</li>
                     </ol>
             </ul>
     </section>
