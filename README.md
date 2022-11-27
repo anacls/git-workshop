@@ -5,7 +5,7 @@ Essa é uma apresentação com o objetivo de ensinar o básico sobre versionamen
 A apresentação pode ser visualizada [nesse link](https://versionamento-com-git-e-github.netlify.com/).
 
 ## Para saber mais:
-* [Site oficial do Git](https://git-scm.com/book/pt-br/v1/Primeiros-passos)
+* [Site oficial do Git](https://git-scm.com/)
 * [Git e GitHub para iniciantes](https://www.udemy.com/git-e-github-para-iniciantes/)
 * [Git - guia prático](http://rogerdudler.github.io/git-guide/index.pt_BR.html)
 
